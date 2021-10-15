@@ -12,14 +12,19 @@ public class Solution42 {
 
         //use method read to read data from specific file. if returned value is false
         //means an error occurred and exits program
-        app.read();
+        if(!app.read()){
+            System.exit(0);
+        }
         //use method parse to parse read data to organize text to table format. if returned value is false
         //means an error occurred and exits program
-        app.parse();
+        if(!app.parse()){
+            System.exit(0);
+        }
         //use method "output" to return a formatted table of employees. format is lastname, firstname, salary
         //Store table in String "output" variable
-        app.output();
-        //output table to user
+        String output = app.output();
 
+        //output table to user
+        System.out.println(output);
     }
 }
