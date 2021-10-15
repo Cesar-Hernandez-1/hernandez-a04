@@ -12,11 +12,15 @@ public class Solution41 {
 
         //invoke read function to read the required file's contents
         //function returns true if read was successful, false otherwise
-        app.read();
+        if(!app.read()){
+            System.exit(0);
+        }
 
         //invoke sort method to sort names from the read function in alphabetical order
         //function returns ture if sort was successful, false otherwise.
-        app.sort();
+        if(!app.sort()){
+            System.exit(0);
+        }
 
         //invoke output method to write sorted names to text output file.
         app.output();
