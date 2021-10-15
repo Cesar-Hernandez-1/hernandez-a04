@@ -1,0 +1,24 @@
+@startuml
+class Solution42{
+    + main(String[])
+    'dataParse app = new dataParse()
+    'app.read()
+    'app.parse()
+    'app.output()
+}
+
+class dataParse{
+    'attributes
+    - List<String> names
+    - StringBuilder table
+
+    'methods
+    + dataParse()
+
+    + read(): boolean
+    + parse(): boolean
+    + output(): String
+}
+
+Solution42 --o dataParse
+@enduml
