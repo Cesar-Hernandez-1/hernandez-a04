@@ -1,0 +1,23 @@
+@startuml
+class Solution41{
+    + main(String[])
+    'nameSorter app = new nameSorter()
+    'app.read()
+    'app.sort()
+    'app.output()
+}
+
+class nameSorter{
+    'attributes
+    - List<String> names
+
+    'methods
+    + nameSorter()
+
+    + read(): boolean
+    + sort(): boolean
+    + output(): void
+}
+
+Solution41 --o nameSorter
+@enduml
