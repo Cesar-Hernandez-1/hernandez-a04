@@ -1,0 +1,32 @@
+@startuml
+class Solution43{
+    main(String[])
+    'websiteGen app = new websiteGen()
+    'app.setName()
+    'app.setAuthor()
+    'app.setJavaScript()
+    'app.setCSS()
+    'app.create()
+}
+
+class websiteGen{
+    'attributes
+    - Scanner input
+    - StringBuilder created
+    - String name
+    - String author
+    - boolean javaScript
+    - boolean css
+
+    'methods
+    + websiteGen()
+
+    + setName(String): boolean
+    + setAuthor(String): boolean
+    + setJavaScript(String): boolean
+    + setCSS(String): boolean
+    + create(): String
+}
+
+Solution43 --o websiteGen
+@enduml
