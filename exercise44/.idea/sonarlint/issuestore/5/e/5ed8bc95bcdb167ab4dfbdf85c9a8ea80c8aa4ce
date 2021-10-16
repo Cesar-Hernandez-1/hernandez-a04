@@ -1,3 +1,4 @@
 
-?
-java:S1068")Remove this unused "input" private field.(‹ì‡²
+U	java:S106"9Replace this use of System.out or System.err by a logger.(û¥²›8İÁµÈ/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(¢àóÄ8ŞÁµÈ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(°İ©üøÿÿÿÿ8ßÁµÈ/

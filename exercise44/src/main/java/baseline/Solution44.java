@@ -11,19 +11,29 @@ public class Solution44 {
         productSearch app = new productSearch();
 
         //try
-        //while true
-        //prompt user what the product name is
-        //use method setSearch and scanner object to sent user input to store in class
-        app.setSearch();
-        //use method getProduct to get product information if found, if search not there
-            //function returns empty string
-        app.getProduct();
-
-        //if method returned not the empty string, display product info and break
-
-        //else, output apology and state product not found
-
-        //catch exception
-        //print stack trace
+        try{
+            //while true
+            while(true){
+                //prompt user what the product name is
+                System.out.print("What is the product name? ");
+                //use method setSearch and scanner object to sent user input to store in class
+                app.setSearch(input.nextLine());
+                //use method getProduct to get product information if found, if search not there
+                //function returns empty string
+                String output = app.getProduct();
+                //if method returned not the empty string, display product info and break
+                if(!output.equals("")){
+                    System.out.println(output);
+                    break;
+                }//else, output apology and state product not found
+                else{
+                    System.out.print("Sorry, that product was not found in our inventory.\n");
+                }
+            }
+        }//catch exception
+        catch (Exception e){
+            //print stack trace
+            e.printStackTrace();
+        }
     }
 }
