@@ -1,0 +1,23 @@
+@startuml
+class Solution44{
+    main(String[])
+    'productSearch app = new productSearch()
+    'app.setSearch()
+    'app.getProduct()
+}
+
+class productSearch{
+    'attributes
+    - StringBuilder foundItem
+    - Gson gson
+    - String search
+
+    'methods
+    + productSearch()
+
+    + setSearch(): void
+    + getProduct(): String
+}
+
+Solution44 --o productSearch
+@enduml
