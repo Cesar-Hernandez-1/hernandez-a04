@@ -1,0 +1,23 @@
+@startuml
+class Solution45{
+    main(String[])
+    'wordFinder app = new wordFinder()
+    'app.read()
+    'app.parse()
+    'app.write()
+}
+
+class wordFinder{
+    'attributes
+    - private static final StringBuilder fileText
+
+    'methods
+    + wordFinder()
+
+    + read(): boolean
+    + parse(): boolean
+    + write(): boolean
+}
+
+Solution45 --o wordFinder
+@enduml
