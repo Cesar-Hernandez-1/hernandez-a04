@@ -8,18 +8,24 @@ import java.io.FileReader;
 public class productSearch {
     //create private String builder object to hold product information data
     private static final StringBuilder foundItem = new StringBuilder();
-    //create private Gson object to use Gson methods to parse Json file
+    //create private Gson objects to use Gson methods to parse Json file
     private static final Gson gson = new Gson();
     //private string variable "search" to hold user input search string
     private String search;
 
-    public void setSearch(String search){
-        //set search to this class's search variable
-        this.search = search;
+    public boolean setSearch(String search){
+        if(search.equals("")){
+            //return false if string is empty as a name to search for is asked
+            return false;
+        }else {
+            //set search to this class's search variable
+            this.search = search;
+            return true;
+        }
     }
 
     public String getProduct() throws FileNotFoundException{
-        //create Object object "object" to hold conversion of file data/exercise44_input.json
+        //create Object "object" to hold conversion of file data/exercise44_input.json
         //to java object
         Object object = gson.fromJson(new FileReader("data/exercise44_input.json"),Object.class);
         //split object by [ and ] and } to remove unnecessary formatting characters and store elements in string array

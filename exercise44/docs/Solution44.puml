@@ -15,7 +15,7 @@ class productSearch{
     'methods
     + productSearch()
 
-    + setSearch(): void
+    + setSearch(String): boolean
     + getProduct(): String
 }
 

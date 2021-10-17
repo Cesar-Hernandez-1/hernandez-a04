@@ -5,8 +5,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class productSearchTest {
+
     @Test
-    void getProductSucess() {
+    void setSearchSuccess() {
+        productSearch app = new productSearch();
+        assertTrue(app.setSearch("Thing"));
+    }
+
+    @Test
+    void getProductSuccess() {
         productSearch app = new productSearch();
         String actual = "";
         String expected = """
@@ -21,6 +28,12 @@ class productSearchTest {
         }
 
         assertEquals(expected, actual);
+    }
+
+    @Test
+    void setSearchFail() {
+        productSearch app = new productSearch();
+        assertFalse(app.setSearch(""));
     }
 
     @Test
