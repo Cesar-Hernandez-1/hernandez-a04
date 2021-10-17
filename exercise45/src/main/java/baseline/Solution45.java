@@ -7,12 +7,18 @@ public class Solution45 {
 
         //invoke method read to read specific file and store contents in class
         //if method returns true, no error occured. Otherwise, if error, exit program.
-        app.read();
+        if(!app.read()){
+            System.exit(0);
+        }
 
         //invoke method parse to parse read text from specific file and do computations on it
-        app.parse();
+        if(!app.parse()){
+            System.exit(0);
+        }
 
         //invoke method write to write parsed results to specific output file
-        app.write();
+        if(!app.write()){
+            System.exit(0);
+        }
     }
 }

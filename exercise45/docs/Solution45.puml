@@ -9,7 +9,7 @@ class Solution45{
 
 class wordFinder{
     'attributes
-    - private static final StringBuilder fileText
+    - StringBuilder fileText
 
     'methods
     + wordFinder()
