@@ -2,7 +2,7 @@
 class Solution45{
     main(String[])
     'wordFinder app = new wordFinder()
-    'app.read()
+    'app.read(String)
     'app.parse()
     'app.write()
 }
@@ -14,7 +14,7 @@ class wordFinder{
     'methods
     + wordFinder()
 
-    + read(): boolean
+    + read(String): boolean
     + parse(): boolean
     + write(): boolean
 }

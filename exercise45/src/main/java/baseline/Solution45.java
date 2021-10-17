@@ -10,9 +10,9 @@ public class Solution45 {
         //create wordFinder object variable instance to use methods of class
         wordFinder app = new wordFinder();
 
-        //invoke method read to read specific file and store contents in class
-        //if method returns true, no error occured. Otherwise, if error, exit program.
-        if(!app.read()){
+        //invoke method read to read specific file and store contents in class, send file path as argument
+        //if method returns true, no error occurred. Otherwise, if error, exit program.
+        if(!app.read("data/exercise45_input.txt")){
             System.exit(0);
         }
 

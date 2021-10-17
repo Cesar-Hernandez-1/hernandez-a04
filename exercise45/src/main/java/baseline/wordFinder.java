@@ -9,9 +9,9 @@ public class wordFinder {
     //create private static final string builder to hold text to be written to output file
     private static final StringBuilder fileText = new StringBuilder();
 
-    public boolean read(){
+    public boolean read(String pathName){
         //try with recourses to create buffered reader object with the path of data/exercise45_input.txt
-        try(BufferedReader buff = new BufferedReader(new FileReader("data/exercise45_input.txt"))){
+        try(BufferedReader buff = new BufferedReader(new FileReader(pathName))){
             //Create string variable "line"
             String line;
             //while the next line read from the file that is stores in line is not null
