@@ -1,0 +1,25 @@
+@startuml
+class Solution46{
+    main(String[])
+    'wordFrequency app = new wordFrequency()
+    'app.read()
+    'app.parse()
+    'app.output()
+}
+
+class wordFrequency{
+    'attributes
+    - Map<String, Integer> words
+    - LinkedHashMap<String, Integer> sortedWords
+    - StringBuilder graph
+
+    'methods
+    + wordFrequency()
+
+    + read(): boolean
+    + parse(): boolean
+    + output(): String
+}
+
+Solution46 --o wordFrequency
+@enduml
