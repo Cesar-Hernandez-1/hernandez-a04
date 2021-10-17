@@ -11,9 +11,9 @@ public class wordFrequency {
     //create private string builder graph to store output graph to user
     private static final StringBuilder graph = new StringBuilder();
 
-    public boolean read(){
+    public boolean read(String pathName){
         //try to create scanner object with scanner constructor sent file object with path data/exercise46_input.txt
-        try(Scanner fileReader = new Scanner(new File("data/exercise46_input.txt"))){
+        try(Scanner fileReader = new Scanner(new File(pathName))){
             //while scanner object on file has next line
             while(fileReader.hasNext()){
                 //define string variable word with the file's next line of text
@@ -41,7 +41,10 @@ public class wordFrequency {
     }
 
     public boolean parse(){
-        try{
+        //if map is empty return false, file has nothing or error occurred in read method
+        if(words.isEmpty()){
+            return false;
+        }else{
             //sort map by largest integer data first and least integer data last.
             //use map entry set method with stream and sorted method
             //then, sort by comparing reverse order value for each value from key
@@ -50,13 +53,7 @@ public class wordFrequency {
             words.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
                     .forEachOrdered(x -> sortedWords.put(x.getKey(),x.getValue()));
             return true;
-        }//catch exception
-        catch (Exception e){
-            //print stack trace
-            e.printStackTrace();
-            //return false
-            return false;
-        }
+         }
     }
 
     public String output(){
@@ -72,6 +69,8 @@ public class wordFrequency {
             graph.append("\n");
         }
         graph.deleteCharAt(graph.length() - 1);
+        sortedWords.clear();
+        words.clear();
         //return the string builder using toString method
         return graph.toString();
     }

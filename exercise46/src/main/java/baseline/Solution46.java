@@ -11,7 +11,7 @@ public class Solution46 {
         wordFrequency app = new wordFrequency();
 
         //use method read to read the specific file
-        if(!app.read()){
+        if(!app.read("data/exercise46_input.txt")){
             System.exit(0);
         }
 

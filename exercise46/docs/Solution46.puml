@@ -16,7 +16,7 @@ class wordFrequency{
     'methods
     + wordFrequency()
 
-    + read(): boolean
+    + read(String): boolean
     + parse(): boolean
     + output(): String
 }
