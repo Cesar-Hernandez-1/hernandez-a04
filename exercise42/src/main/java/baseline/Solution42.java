@@ -12,7 +12,8 @@ public class Solution42 {
 
         //use method read to read data from specific file. if returned value is false
         //means an error occurred and exits program
-        if(!app.read()){
+        if(!app.read("data/exercise42_input.txt")){
+            System.out.println("File not found");
             System.exit(0);
         }
         //use method parse to parse read data to organize text to table format. if returned value is false

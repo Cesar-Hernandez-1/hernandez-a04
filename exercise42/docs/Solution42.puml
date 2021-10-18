@@ -11,11 +11,12 @@ class dataParse{
     'attributes
     - List<String> names
     - StringBuilder table
+    - boolean fileRead
 
     'methods
     + dataParse()
 
-    + read(): boolean
+    + read(String): boolean
     + parse(): boolean
     + output(): String
 }
