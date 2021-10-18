@@ -52,4 +52,45 @@ class websiteGenTest {
         }
         assertEquals(expected, result);
     }
+
+    @Test
+    void setNameFail() {
+        websiteGen app1 = new websiteGen();
+        assertFalse(app1.setName("amazingco?"));
+    }
+
+    @Test
+    void setAuthorFail() {
+        websiteGen app1 = new websiteGen();
+        assertFalse(app1.setAuthor(""));
+    }
+
+    @Test
+    void setJavaScriptFail() {
+        websiteGen app1 = new websiteGen();
+        assertFalse(app1.setJavaScript("yes"));
+    }
+
+    @Test
+    void setCSSFail() {
+        websiteGen app1 = new websiteGen();
+        assertFalse(app1.setCSS("yes"));
+    }
+
+    @Test
+    void createFail() {
+        websiteGen app1 = new websiteGen();
+
+        String result = "";
+        String expected = """
+                Created data/website/amazingco
+                Created data/website/amazingco/index.html
+                """;
+        try{
+            result = app1.create();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        assertNotEquals(expected, result);
+    }
 }

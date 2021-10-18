@@ -1,12 +1,2 @@
 
-l
-java:S1192["VDefine a constant instead of duplicating this literal "Created data/website/" 4 times.(ˆ°Û¯
-i
-java:S1192X"NDefine a constant instead of duplicating this literal "data/website/" 3 times.(ÍåãĞùÿÿÿÿ
 b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Î¶ĞÌ
-c
-java:S2095a"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(Å£ı«ıÿÿÿÿ
-T
-java:S3516"9Refactor this method to not always return the same value.(µ øÿÿÿÿ
-O
-java:S3516%"9Refactor this method to not always return the same value.(¦¤ŒÛ

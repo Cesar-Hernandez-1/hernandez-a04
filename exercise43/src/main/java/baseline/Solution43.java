@@ -19,21 +19,25 @@ public class Solution43 {
         //use method setName to get String name of website
         System.out.print("Site name: ");
         if(!app.setName(input.nextLine())){
+            System.out.println("Site contains illegal character.");
             System.exit(0);
         }
         //use method setAuthor to get Author's name
         System.out.print("Author: ");
         if(!app.setAuthor(input.nextLine())){
+            System.out.println("No author name provided.");
             System.exit(0);
         }
         //use method setJavaScript to determine if a javascript folder should be made
         System.out.print("Do you want a folder for JavaScript? ");
         if(!app.setJavaScript(input.nextLine())){
+            System.out.println("Character expected.");
             System.exit(0);
         }
         //use method setCSS to determine if a css folder should be made
         System.out.print("Do you want a folder for css? ");
         if(!app.setCSS(input.nextLine())){
+            System.out.println("Character expected.");
             System.exit(0);
         }
         //try and use method create to return a string of all directories that were creates
