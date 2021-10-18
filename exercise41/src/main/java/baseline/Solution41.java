@@ -12,13 +12,16 @@ public class Solution41 {
 
         //invoke read function to read the required file's contents
         //function returns true if read was successful, false otherwise
-        if(!app.read()){
+        if(!app.read("data/exercise41_input.txt")){
+            //prompt error message
+            System.out.println("File not found.");
             System.exit(0);
         }
 
         //invoke sort method to sort names from the read function in alphabetical order
         //function returns ture if sort was successful, false otherwise.
         if(!app.sort()){
+            System.out.println("No file read before parsing.");
             System.exit(0);
         }
 

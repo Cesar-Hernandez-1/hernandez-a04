@@ -10,11 +10,12 @@ class Solution41{
 class nameSorter{
     'attributes
     - List<String> names
+    - boolean fileRead = false
 
     'methods
     + nameSorter()
 
-    + read(): boolean
+    + read(String): boolean
     + sort(): boolean
     + output(): void
 }

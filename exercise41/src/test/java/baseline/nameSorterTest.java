@@ -13,12 +13,13 @@ class nameSorterTest {
     @Test
     void read() {
         nameSorter app = new nameSorter();
-        assertTrue(app.read());
+        assertTrue(app.read("data/exercise41_input.txt"));
     }
 
     @Test
     void sort() {
         nameSorter app = new nameSorter();
+        app.read("data/exercise41_input.txt");
         assertTrue(app.sort());
     }
 
@@ -35,7 +36,7 @@ class nameSorterTest {
                 "Swift, Geoffrey\n" +
                 "Xiong, Fong\n" +
                 "Zarnecki, Sabrina\n";
-        app.read();
+        app.read("data/exercise41_input.txt");
         app.sort();
         app.output();
 
@@ -46,5 +47,18 @@ class nameSorterTest {
             }
         }
         assertEquals(expected, table.toString());
+    }
+
+    @Test
+    void readFail() {
+        nameSorter app = new nameSorter();
+        assertFalse(app.read("data/fakeFile.txt"));
+    }
+
+    @Test
+    void sortFail() {
+        nameSorter app = new nameSorter();
+        app.read("data/fakeFile.txt");
+        assertFalse(app.sort());
     }
 }
